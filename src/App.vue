@@ -1,28 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <!-- AppHeader 컴포넌트 영역 -->
+    <!-- <app-header :userId="userId"></app-header> -->
+    <app-header></app-header>
+
+    <!-- AppContent -> UserForm 컴포넌트 영역 -->
+    <!-- <app-content @pass2:id="logId"></app-content> -->
+    <app-content></app-content>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from './components/AppHeader.vue';
+import AppContent from './components/AppContent.vue';
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+	components: {
+		AppHeader,
+		AppContent,
+	},
+	// data() {
+	// 	return {
+	// 		userId: '',
+	// 	};
+	// },
+	// methods: {
+	// 	logId(value) {
+	// 		this.userId = value;
+	// 	},
+	// },
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
